@@ -1,5 +1,7 @@
 # Хмах Спикер
 
+![Xmax Speaker preview](./.assets/preview.png "Xmax Speaker preview")
+
 ## Установка
 Закинуть в папку .../Wallpaper Engine/projects/defaultprojects/
 
