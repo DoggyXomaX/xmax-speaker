@@ -1,5 +1,6 @@
 # Хмах Спикер
 
+Болтает, моргает
 ![Xmax Speaker preview](./.assets/preview.png "Xmax Speaker preview")
 
 ## Установка
