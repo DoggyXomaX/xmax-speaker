@@ -1,0 +1,74 @@
+:root {
+  --mouth: 0;
+  --mouth-offset: 18px;
+  --xmax-scale: 2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  color: white;
+  background-color: black;
+}
+
+#xmax,
+#mouth,
+#eyes {
+  display: block;
+  width: 512px;
+  height: 512px;
+
+  position: absolute;
+  left: 50%;
+}
+
+#xmax {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(var(--xmax-scale));
+
+  background-image: url(../img/xmax.png);
+  z-index: 1;
+}
+
+#mouth {
+  top: calc(50% + var(--mouth-offset) * var(--mouth) * var(--xmax-scale));
+  transform: translate(-50%, -50%) scale(var(--xmax-scale));
+
+  transition: top 0.01s;
+
+  background-image: url(../img/mouth.png);
+  z-index: 2;
+}
+
+#eyes {
+  top: 50%;
+  transform: translate(-50%, -50%) scale(var(--xmax-scale));
+
+  display: none;
+  z-index: 3;
+}
+
+#debug {
+  display: block;
+  width: 25%;
+  height: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  background-color: rgba(255, 0, 0, 0.1);
+  z-index: 3;
+}
